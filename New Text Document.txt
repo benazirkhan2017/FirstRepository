@@ -1,0 +1,43 @@
+import java.lang.*;
+public class Pattern1
+{
+	public static void main(String args[])
+	{	
+		int counter = 0;
+		int counter2 = 5;
+		char c1 = '*';
+		
+		for(int i=0; i<=4; i++ ) //for 5 rows
+		{   
+			//System.out.print(counter2+" "+ counter);
+			while(counter<counter2)  //for first half of the row
+			{
+				for(int j=0; j<counter2; j++)
+				{
+					System.out.print(c1);
+					counter++;
+				}
+			}
+			for(int k=0; k<i; k++) //for spacing between first and second half of row
+			{
+				System.out.print("  ");
+			}  
+			
+			while(counter!=0)       //for second half of the row
+			{
+				for(int j=0; j<counter2; j++)
+				{	
+					c1--;
+					System.out.print(c1);
+					counter--;
+				}
+			}
+			
+			
+				
+			counter2--;
+			System.out.println();
+		}
+		
+	}
+}
